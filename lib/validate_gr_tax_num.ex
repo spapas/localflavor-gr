@@ -43,6 +43,9 @@ defmodule ValidateGrTaxNum do
       false
 
   """
+
+  @multipliers 8..1 |> Enum.map(&(:math.pow(2, &1) |> trunc))
+
   def valid(val) do
     case val |> covert_to_digits |> get_digits_and_check do
       {check, digits} ->
@@ -50,8 +53,8 @@ defmodule ValidateGrTaxNum do
         # and get their rem with 11
         check ==
           digits
-          |> Enum.with_index()
-          |> Enum.map(fn {d, idx} -> (d * :math.pow(2, idx + 1)) |> round end)
+          |> Enum.zip(@multipliers)
+          |> Enum.map(fn {x, y} -> x * y end)
           |> Enum.sum()
           |> rem(11)
           # Check if the previous calc is equal to the check digit; If the rem was 10
@@ -84,10 +87,9 @@ defmodule ValidateGrTaxNum do
     if length(all_digits) != 9 || all_digits |> Enum.sum() == 0 do
       false
     else
-      # Return the check digit and reverse the rest of the digits for easier manipulation
+      # Return the check digit (last) and the rest of the digits
       all_digits
-      |> Enum.reverse()
-      |> List.pop_at(0)
+      |> List.pop_at(8)
     end
   end
 end
