@@ -4,13 +4,12 @@ A simple module for validating 9-digit Greek Tax numbers.
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `validate_gr_tax_num` to your list of dependencies in `mix.exs`:
+Just add this to your deps:
 
 ```elixir
 def deps do
   [
-    {:validate_gr_tax_num, "~> 0.1.0"}
+    {:validate_greek_tax_number, github: "spapas/validate_greek_tax_number"}
   ]
 end
 ```
