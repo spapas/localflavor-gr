@@ -1,4 +1,4 @@
-# Validate Grekk Tax Number
+# Validate Greek Tax Number
 
 A simple module for validating 9-digit Greek Tax numbers.
 
