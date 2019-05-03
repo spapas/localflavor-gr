@@ -9,12 +9,19 @@ Just add this to your deps:
 ```elixir
 def deps do
   [
-    {:validate_greek_tax_number, github: "spapas/validate_greek_tax_number"}
+    {:validate_greek_tax_number, github: "spapas/validate_greek_tax_number", app: false}
   ]
 end
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/validate_gr_tax_num](https://hexdocs.pm/validate_gr_tax_num).
+## Usage
 
+There's only one:
+
+```elixir
+iex(4)> ValidateGrTaxNum.valid("129354600")
+true
+
+iex(5)> ValidateGrTaxNum.valid("997073525")
+true
+```
