@@ -19,8 +19,8 @@ end
 There's only one:
 
 ```elixir
-iex(4)> ValidateGrTaxNum.valid("129354600")
-true
+iex(4)> ValidateGrTaxNum.valid("234564611")
+false
 
 iex(5)> ValidateGrTaxNum.valid("997073525")
 true
