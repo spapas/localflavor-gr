@@ -14,6 +14,8 @@ def deps do
 end
 ```
 
+You can also just pick the `lib/validate_gr_tax_num.ex` and copy it to your project; you'll be good to go with just that.
+
 ## Usage
 
 There's only one:
