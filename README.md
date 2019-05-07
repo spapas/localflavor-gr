@@ -1,6 +1,6 @@
 # Validate Greek Tax Number
 
-A simple module for validating 9-digit Greek Tax numbers.
+A very simple module for validating 9-digit Greek Tax numbers.
 
 ## Installation
 
