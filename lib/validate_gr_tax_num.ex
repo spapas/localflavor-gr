@@ -1,6 +1,6 @@
 defmodule ValidateGrTaxNum do
   @moduledoc """
-  A simple module to validate a greek tax number.
+  A simple module to validate a greek tax number (AFM).
 
   A greek tax number has 9 digits; the last one of
   them is a checksum digit and the others are used
