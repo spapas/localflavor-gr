@@ -66,6 +66,7 @@ defmodule ValidateAMKA do
     # return an empty array
 
     # fix date Regex.replace(~r/(\d\d)(\d\d)(\d\d)/, "250611", "19\\3-\\2-\\1")
+    # or "150615" |> String.graphemes |> Enum.chunk_every(2) |> Enum.reverse |> Enum.flat_map(& &1) |> List.insert_at(2,"-") |> List.insert_at(5,"-") |> List.insert_at(0, "19") |> Enum.join |> Date.from_iso8601
     try do
       val
       |> String.replace(~r/[ -]/, "")
