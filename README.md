@@ -1,6 +1,6 @@
-# Validate Greek Tax Number
+# Greek local flavor
 
-A very simple module for validating 9-digit Greek Tax numbers.
+A very simple project for validating 9-digit greek tax numbers and 11-digit greek social security numbers.
 
 ## Installation
 
@@ -9,12 +9,12 @@ Just add this to your deps:
 ```elixir
 def deps do
   [
-    {:validate_greek_tax_number, github: "spapas/validate_greek_tax_number", app: false}
+    {:localflavor_gr, github: "spapas/localflavor-gr", app: false}
   ]
 end
 ```
 
-You can also just pick the `lib/validate_gr_tax_num.ex` and copy it to your project; you'll be good to go with just that.
+You can also just pick the `lib/validate_gr_tax_num.ex` or `lib/validate_amka.exe` and copy them to your project; you'll be good to go with just that.
 
 ## Usage
 
