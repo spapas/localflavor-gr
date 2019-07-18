@@ -1,5 +1,5 @@
-defmodule ValidateGrTaxNumTest do
+defmodule ValidateAMKATest do
   use ExUnit.Case
   doctest ValidateGrTaxNum
-  doctest ValidateAMKA
+
 end
