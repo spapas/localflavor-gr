@@ -14,7 +14,7 @@ def deps do
 end
 ```
 
-You can also just pick the `lib/validate_gr_tax_num.ex` or `lib/validate_amka.exe` and copy them to your project; you'll be good to go with just that.
+You can also just pick the `lib/validate_gr_tax_num.ex` or `lib/validate_amka.ex` and copy them to your project; you'll be good to go with just that.
 
 ## Usage
 
