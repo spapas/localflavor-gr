@@ -9,12 +9,14 @@ Just add this to your deps:
 ```elixir
 def deps do
   [
-    {:localflavor_gr, github: "spapas/localflavor-gr", app: false}
+    {:localflavor_gr, "~> 0.1.0"}
+    # or to use the latest version from GH 
+    #{:localflavor_gr, github: "spapas/localflavor-gr", app: false}
   ]
 end
 ```
 
-You can also just pick the `lib/validate_gr_tax_num.ex` or `lib/validate_amka.ex` and copy them to your project; you'll be good to go with just that.
+You can also just pick the `lib/validate_gr_tax_num.ex` or `lib/validate_amka.ex` moduels and copy them to your project; you'll be good to go with just that.
 
 ## Usage
 
