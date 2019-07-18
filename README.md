@@ -18,12 +18,18 @@ You can also just pick the `lib/validate_gr_tax_num.ex` or `lib/validate_amka.ex
 
 ## Usage
 
-There's only one:
+Really simple:
 
 ```elixir
 iex(4)> ValidateGrTaxNum.valid("234564611")
 false
 
 iex(5)> ValidateGrTaxNum.valid("997073525")
+true
+
+iex(6)> ValidateAMKA.valid("52058401523")
+false
+
+iex(7)> ValidateAMKA.valid("02058401528")
 true
 ```
