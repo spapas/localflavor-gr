@@ -51,8 +51,8 @@ defmodule ValidateAMKA do
       digits ->
         # 1. Reverse the digits and add an index to them
         digits
-        |> Enum.reverse
-        |> Enum.with_index()  
+        |> Enum.reverse()
+        |> Enum.with_index()
         # Then sum the digits either as they are or using the luhn_double_digit
         |> Enum.map(fn {d, idx} -> if rem(idx, 2) == 0, do: d, else: luhn_double_digit(d) end)
         |> Enum.sum()
@@ -69,7 +69,7 @@ defmodule ValidateAMKA do
     # This will return the 2*digit as it is if it is < 9 or it will the sum of the digits if it is >= 10
     # i.e 18 = 1+8 = 9
     d2 = d * 2
-    if d2 > 9, do: 1+(d2-10), else: d2
+    if d2 > 9, do: 1 + (d2 - 10), else: d2
   end
 
   defp is_valid_date(<<d1, d2, m1, m2, y1, y2>>)
@@ -83,14 +83,13 @@ defmodule ValidateAMKA do
     # solution 4b. (same as with 4a but with guards):
     # (fn(<<d1, d2, m1, m2, y1, y2>>) when  d1 in ?0..?9 and d2 in ?0..?9 and  m1 in ?0..?9 and m2 in ?0..?9 and y1 in ?0..?9 and y2 in ?0..?9 -> <<?1, ?9, y1, y2, ?-, m1, m2, ?-, d1, d2>> end ).("230413")
     <<?1, ?9, y1, y2, ?-, m1, m2, ?-, d1, d2>>
-    |> Date.from_iso8601() 
-    
+    |> Date.from_iso8601()
   end
 
   defp covert_to_digits(val) do
     # Convert the digits to integers. If there are forbitten characters
     # return an empty array
-    
+
     okval = val |> String.replace(~r/[ -]/, "")
 
     case okval |> String.slice(0, 6) |> is_valid_date do
