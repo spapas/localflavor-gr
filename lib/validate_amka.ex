@@ -14,17 +14,17 @@ defmodule ValidateAMKA do
 
   ## Examples
 
-      #iex> ValidateAMKA.valid("00000000000")
-      #false
+      iex> ValidateAMKA.valid("00000000000")
+      false
 
-      #iex> ValidateAMKA.valid("000000001")
-      #false
+      iex> ValidateAMKA.valid("000000001")
+      false
 
-      #iex> ValidateAMKA.valid("123123123")
-      #false
+      iex> ValidateAMKA.valid("123123123")
+      false
 
-      #iex> ValidateAMKA.valid("993123123")
-      #false
+      iex> ValidateAMKA.valid("993123123")
+      false
 
       iex> ValidateAMKA.valid("21068302673")
       false
